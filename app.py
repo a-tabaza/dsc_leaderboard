@@ -6,28 +6,6 @@ st.header("Welcome to the Data Science Club")
 import requests
 import json
 
-# url = "https://eu-central-1.aws.data.mongodb-api.com/app/data-znkwb/endpoint/data/v1/action/findOne"
-
-# payload = json.dumps({
-#     "collection": "<COLLECTION_NAME>",
-#     "database": "<DATABASE_NAME>",
-#     "dataSource": "dscdev",
-#     "projection": {
-#         "_id": 1
-#     }
-# })
-# headers = {
-#   'Content-Type': 'application/json',
-#   'Access-Control-Request-Headers': '*',
-#   'api-key': st.secrets["MONGODB_DATA_API"],
-# }
-
-# response = requests.request("POST", url, headers=headers, data=payload)
-
-# print(response.text)
-
-
-
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -42,3 +20,15 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
+
+db = client.leaderboard
+users = db.users
+
+# data = users.find_one({'username': 'Abdulrahman Tabaza'})
+
+for user in users.find():
+    st.write(user['username'])
+    st.write(user['score'])
+
+# #for user in data:
+# st.write(data['username'])
