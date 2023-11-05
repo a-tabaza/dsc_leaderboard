@@ -6,25 +6,25 @@ st.header("Welcome to the Data Science Club")
 import requests
 import json
 
-url = "https://eu-central-1.aws.data.mongodb-api.com/app/data-znkwb/endpoint/data/v1/action/findOne"
+# url = "https://eu-central-1.aws.data.mongodb-api.com/app/data-znkwb/endpoint/data/v1/action/findOne"
 
-payload = json.dumps({
-    "collection": "<COLLECTION_NAME>",
-    "database": "<DATABASE_NAME>",
-    "dataSource": "dscdev",
-    "projection": {
-        "_id": 1
-    }
-})
-headers = {
-  'Content-Type': 'application/json',
-  'Access-Control-Request-Headers': '*',
-  'api-key': 'YGzf1Lv9D6P3mCVhPH18gJZeDkQTk9fiD7guslq5LvDK7oqC6MMggn5xsNjvZnLn',
-}
+# payload = json.dumps({
+#     "collection": "<COLLECTION_NAME>",
+#     "database": "<DATABASE_NAME>",
+#     "dataSource": "dscdev",
+#     "projection": {
+#         "_id": 1
+#     }
+# })
+# headers = {
+#   'Content-Type': 'application/json',
+#   'Access-Control-Request-Headers': '*',
+#   'api-key': 'YGzf1Lv9D6P3mCVhPH18gJZeDkQTk9fiD7guslq5LvDK7oqC6MMggn5xsNjvZnLn',
+# }
 
-response = requests.request("POST", url, headers=headers, data=payload)
+# response = requests.request("POST", url, headers=headers, data=payload)
 
-print(response.text)
+# print(response.text)
 
 
 
