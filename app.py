@@ -19,7 +19,7 @@ import json
 # headers = {
 #   'Content-Type': 'application/json',
 #   'Access-Control-Request-Headers': '*',
-#   'api-key': 'YGzf1Lv9D6P3mCVhPH18gJZeDkQTk9fiD7guslq5LvDK7oqC6MMggn5xsNjvZnLn',
+#   'api-key': st.secrets["MONGODB_DATA_API"],
 # }
 
 # response = requests.request("POST", url, headers=headers, data=payload)
